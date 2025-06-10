@@ -32,14 +32,14 @@ def main():
                 for item in shopping_list:
                     print(f"- {item}")
             else:
-                print("Your shopping list is empty.")
+                print(f"Your shopping list is empty.")
 
         elif choice == '4':
-            print("Goodbye!")
+            print(f"Goodbye!")
             break
 
         else:
-            print("Invalid choice. Please try again.")
+            print(f"Invalid choice. Please try again.")
 
 if __name__ == "__main__":
     main()
