@@ -1,22 +1,16 @@
 class Car:
-    def __init__(self, make, model, year):
+    def __init__(self, make):
         self.make = make
-        self.model = model
-        self.year = year
 
-    def start(self,check):
-        return f"The {self.year} {self.make} {self.model} {check} is starting."
-
-    def stop(self):
-        return f"The {self.year} {self.make} {self.model} is stopping."
-
-    def honk(self):
-        return "Beep beep!"
+    def intro(self):
+        return f"This car is a {self.make}."
     
-myCar = Car("Toyota", "Corolla", 2020)
-print(myCar.start("Yes"))
+class Jeep(Car):
+    def __init__(self, make, model):
+        super().__init__(make)
+        self.model = model
+    def start(self):
+        print(f"The {self.make} {self.model} is starting.")
 
-try:
-    print(2/0)
-except Exception as e:
-    print(f"An error occurred: {e}")
+myCar = Jeep("Jeep", "Wrangler")
+
